@@ -1,0 +1,53 @@
+:root {
+    --dark-color: rgb(84, 86, 87);
+    --light-color: rgb(224, 226, 229);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--dark-color);
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+nav a {
+   text-decoration: none;
+   color:var(--light-color);
+}
+#menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+#menu-toggle {
+    display: none;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+#menu.active {
+    display: flex;
+}
+
+/* mobile media  -  480px or less */
+/* max-width: 480px is the same as saying 
+if width is less than 480px, run this css */
+@media screen and (max-width: 30em) {
+    #menu-toggle {
+        display: block;
+    }
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: var(--dark-color);
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
